@@ -1,0 +1,20 @@
+{
+  "name": "stealthpay",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "test:ts": "vitest run"
+  },
+  "dependencies": {
+    "viem": "^2.21.0",
+    "@noble/curves": "^1.6.0",
+    "@noble/hashes": "^1.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "tsx": "^4.19.0"
+  }
+}

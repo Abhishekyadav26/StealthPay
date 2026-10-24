@@ -10,21 +10,15 @@ interface IERC5564Announcer {
         bytes metadata
     );
 
-    function announce(
-        uint256 schemeId,
-        address stealthAddress,
-        bytes calldata ephemeralPubKey,
-        bytes calldata metadata
-    ) external;
+    function announce(uint256 schemeId, address stealthAddress, bytes calldata ephemeralPubKey, bytes calldata metadata)
+        external;
 }
 
 contract ERC5564Announcer is IERC5564Announcer {
-    function announce(
-        uint256 schemeId,
-        address stealthAddress,
-        bytes calldata ephemeralPubKey,
-        bytes calldata metadata
-    ) external override {
+    function announce(uint256 schemeId, address stealthAddress, bytes calldata ephemeralPubKey, bytes calldata metadata)
+        external
+        override
+    {
         emit Announcement(schemeId, stealthAddress, msg.sender, ephemeralPubKey, metadata);
     }
 }
